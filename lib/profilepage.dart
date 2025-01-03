@@ -7,14 +7,20 @@ class Profilepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color.fromARGB(135, 249, 201, 241),
+        backgroundColor: const Color.fromARGB(134, 0, 132, 255),
         body: Column(
           children: [
+            SizedBox(
+              height: 55,
+            ),
             CircleAvatar(
               backgroundColor: Colors.deepPurpleAccent,
               radius: 50,
               backgroundImage: NetworkImage(
-                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgqaPZ6HpmxExPx5g_Rxgp8o0vPAdSCZcxMQ&s'),
+                  'https://t3.ftcdn.net/jpg/08/15/05/66/360_F_815056602_JKMZQhQOFkobpSiBK8NuCl8BMPoaFQLu.jpg'),
+            ),
+            SizedBox(
+              height: 35,
             ),
             Text(
               FirebaseAuth.instance.currentUser?.email ?? 'Your Name',
@@ -34,7 +40,7 @@ class Profilepage extends StatelessWidget {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: const Color.fromARGB(255, 240, 211, 246),
+                color: const Color.fromARGB(255, 255, 255, 255),
               ),
               margin: EdgeInsets.all(25),
               padding: EdgeInsets.all(15),
@@ -56,7 +62,7 @@ class Profilepage extends StatelessWidget {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: const Color.fromARGB(255, 240, 211, 246),
+                color: const Color.fromARGB(255, 255, 255, 255),
               ),
               margin: EdgeInsets.all(25),
               padding: EdgeInsets.all(15),

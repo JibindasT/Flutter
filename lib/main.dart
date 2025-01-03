@@ -8,10 +8,11 @@ import 'package:newproject/profilepage.dart';
 import 'package:newproject/signup.dart';
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(MaterialApp(
-    home: Loginpage(),
+    home: Profilepage(),
   ));
 }

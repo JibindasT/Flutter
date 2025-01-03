@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class Profilepage extends StatelessWidget {
@@ -6,7 +7,7 @@ class Profilepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color.fromARGB(255, 245, 245, 245),
+        backgroundColor: const Color.fromARGB(135, 249, 201, 241),
         body: Column(
           children: [
             CircleAvatar(
@@ -16,7 +17,7 @@ class Profilepage extends StatelessWidget {
                   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgqaPZ6HpmxExPx5g_Rxgp8o0vPAdSCZcxMQ&s'),
             ),
             Text(
-              'JOHN',
+              FirebaseAuth.instance.currentUser?.email ?? 'Your Name',
               style: TextStyle(
                   fontSize: 33,
                   fontFamily: 'Allura',
